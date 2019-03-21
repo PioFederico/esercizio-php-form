@@ -22,7 +22,7 @@ $indirizzo = (isset($_POST['indirizzo'])) ? $_POST['indirizzo'] : '';
         <?php
         '<ul>';
         foreach ($_POST as $key => $value) {
-          print $key . ':' . $value . '<li>';
+          print '<li>' . $key . ': ' . $value;
         }
         '</li>';
         '</ul>';
