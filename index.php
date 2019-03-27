@@ -19,14 +19,13 @@ $indirizzo = (isset($_POST['indirizzo'])) ? $_POST['indirizzo'] : '';
     <div class="container">
       <h1>Inserisci i tuoi dati qui</h1>
       <div class="alert alert-primary" role="alert">
+        <ul>
         <?php
-        '<ul>';
         foreach ($_POST as $key => $value) {
-          print '<li>' . $key . ': ' . $value;
+          print '<li>' . $key . ': ' . $value . '</li>';
         }
-        '</li>';
-        '</ul>';
         ?>
+        </ul>
         </div>
         <form action="index.php" method="post">
           <div class="form-group">
