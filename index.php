@@ -18,6 +18,11 @@ $indirizzo = (isset($_POST['indirizzo'])) ? $_POST['indirizzo'] : '';
   <body>
     <div class="container">
       <h1>Inserisci i tuoi dati qui</h1>
+      <?php if (empty($nome)): ?>
+      <div class="alert alert-danger" role="alert">
+        <p>Scrivi il tuo nome</p>
+      </div>  
+      <?php else: ?>
       <div class="alert alert-primary" role="alert">
         <ul>
         <?php
@@ -26,7 +31,10 @@ $indirizzo = (isset($_POST['indirizzo'])) ? $_POST['indirizzo'] : '';
         }
         ?>
         </ul>
-        </div>
+      </div>
+      <?php endif; ?>
+      
+      
         <form action="index.php" method="post">
           <div class="form-group">
             <label for="name">Nome</label>
